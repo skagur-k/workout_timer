@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget {
   final String title;
-
-  AppBarWidget(this.title);
+  final bool timer;
+  AppBarWidget(this.title, this.timer);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class AppBarWidget extends StatelessWidget {
           centerTitle: true,
           elevation: 0,
           brightness: Brightness.light,
-          actions: true
+          actions: timer
               ? [
                   IconButton(
                       icon: Icon(Icons.add),

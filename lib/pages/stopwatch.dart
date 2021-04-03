@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/stopwatch_controller.dart';
 import '../helpers/time_helper.dart';
+import 'components/appBarWidget.dart';
 
 class StopWatchPage extends StatelessWidget {
   final RxBool _isRunning = false.obs;
@@ -57,7 +58,13 @@ class StopWatchPage extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 _stopWatchTimer.isPaused ? startStopWatch() : stopStopWatch();
-                print(_msg);
+                Get.snackbar(
+                  'snackbar_title'.tr, 'sw_start_dialog_msg'.tr,
+                  snackPosition: SnackPosition.TOP,
+                  margin: EdgeInsets.only(top: 70),
+                  duration: Duration(seconds: 3),
+                  // backgroundColor: Colors.grey[900]
+                );
               },
               child: _stopWatchTimer.isPaused
                   ? Text('sw_resume'.tr)
@@ -88,7 +95,7 @@ class StopWatchPage extends StatelessWidget {
                       );
                     });
               },
-              child: Text('초기화'),
+              child: Text('sw_reset'.tr),
               style: ElevatedButton.styleFrom(
                   primary: Colors.black26,
                   shape: StadiumBorder(),

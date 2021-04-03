@@ -28,16 +28,12 @@ class App extends StatelessWidget {
         drawer: DrawerWidget(),
         appBar: PreferredSize(
             preferredSize: Size.fromHeight(70),
-            child: AppBarWidget('title'.tr)),
+            child: AppBarWidget('title'.tr, false)),
         body: ScrollConfiguration(
           behavior: NoScrollGlowBehavior(),
           child: TabBarView(children: views),
         ),
-        bottomNavigationBar: Container(
-            color: Color(0xffF2F2F2),
-            child: Padding(
-                padding: EdgeInsets.only(bottom: 30, left: 30, right: 30),
-                child: BottomTabBarWidget())),
+        bottomNavigationBar: BottomTabBarWidget(),
       ),
     );
   }

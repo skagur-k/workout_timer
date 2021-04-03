@@ -12,6 +12,14 @@ void main() {
   runApp(MyApp());
 }
 
+/* TODO:
+    * Notifications ![https://github.com/MaikuB/flutter_local_notifications/tree/master/flutter_local_notifications]
+    * Dark Theme ![https://pub.dev/packages/get#change-theme]
+    * Shared Preferences ![]
+    * Splash Screen / Intro Screen
+    * GetView (?)
+*/
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,8 +35,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: () => App()),
-        GetPage(name: '/stopwatch', page: () => StopWatchPage()),
-        GetPage(name: '/timer', page: () => TimerPage()),
         GetPage(
             name: '/settings',
             page: () => SettingsPage(),

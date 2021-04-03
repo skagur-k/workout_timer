@@ -15,9 +15,10 @@ const Map<String, String> enUS = {
   'sw_running_msg': 'Keeping time...',
   'sw_resetted_msg': 'Start Your Timer',
 
-  //Reset Dialog
-  'sw_reset_dialog_title': 'Workout Timer+',
-  'sw_reset_dialog_msg': 'Stop Watch has been resetted!',
+  //Dialog
+  'snackbar_title': 'Workout Timer+',
+  'sw_reset_dialog_msg': 'Stopwatch Resetted.',
+  'sw_start_dialog_msg': 'Stopwatch Started.',
 
   //Drawer
   'dr_title': 'Workout Timer+',

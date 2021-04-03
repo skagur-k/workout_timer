@@ -11,13 +11,14 @@ const Map<String, String> koKR = {
   'tm_start': '타이머 시작',
 
   //Stopwatch Messages
-  'sw_stopped_msg': '타이머가 중지되었습니다. 계속하려면 다시시작을 눌러주세요.',
+  'sw_stopped_msg': '타이머가 중지되었습니다. \n 계속하려면 다시시작을 눌러주세요.',
   'sw_running_msg': '시간 측정중...',
   'sw_resetted_msg': '스톱워치를 시작해주세요',
 
-  //Reset Dialog
-  'sw_reset_dialog_title': '운동 타이머+',
-  'sw_reset_dialog_msg': '스톱워치가 초기화 되었습니다.',
+  //Dialog
+  'snackbar_title': '운동 타이머+',
+  'sw_reset_dialog_msg': '스톱워치가 초기화되었습니다.',
+  'sw_start_dialog_msg': '스톱워치가 시작되었습니다.',
 
   //Drawer
   'dr_title': '운동 타이머+',

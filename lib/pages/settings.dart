@@ -7,7 +7,7 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
         appBar: PreferredSize(
       preferredSize: Size.fromHeight(70),
-      child: AppBarWidget("Settings"),
+      child: AppBarWidget("Settings", false),
     ));
   }
 }
