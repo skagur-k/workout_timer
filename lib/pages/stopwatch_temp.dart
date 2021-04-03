@@ -3,30 +3,32 @@ import 'package:get/get.dart';
 import '../controllers/stopwatch_controller.dart';
 import '../helpers/time_helper.dart';
 
-class StopWatchPage extends GetView<StopWatchController> {
+class StopWatchPage extends StatelessWidget {
   final RxString _msg = "".obs;
 
+  final StopWatchController _stopWatchTimer =
+      StopWatchController(); // Create Stop Watch Instance
   final TimeHelper _t = TimeHelper();
 
   void startStopWatch() {
-    controller.onExecute(StopWatchExecute.start);
+    _stopWatchTimer.onExecute(StopWatchExecute.start);
     _msg.value = 'sw_running_msg'.tr;
   }
 
   void stopStopWatch() {
-    controller.onExecute(StopWatchExecute.stop);
+    _stopWatchTimer.onExecute(StopWatchExecute.stop);
     _msg.value = 'sw_stopped_msg'.tr;
   }
 
   void resetStopWatch() {
-    controller.onExecute(StopWatchExecute.reset);
+    _stopWatchTimer.onExecute(StopWatchExecute.reset);
     _msg.value = 'sw_resetted_msg'.tr;
   }
 
   Widget _stopWatchButtons() {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Visibility(
-        visible: !controller.isTicking && !controller.isPaused,
+        visible: !_stopWatchTimer.isTicking && !_stopWatchTimer.isPaused,
         child: ElevatedButton(
             onPressed: () {
               startStopWatch();
@@ -40,11 +42,11 @@ class StopWatchPage extends GetView<StopWatchController> {
       ),
       // SizedBox(width: 20),
       Visibility(
-        visible: controller.isTicking || controller.isPaused,
+        visible: _stopWatchTimer.isTicking || _stopWatchTimer.isPaused,
         child: Row(children: [
           ElevatedButton(
               onPressed: () {
-                controller.isPaused ? startStopWatch() : stopStopWatch();
+                _stopWatchTimer.isPaused ? startStopWatch() : stopStopWatch();
                 Get.snackbar(
                   'snackbar_title'.tr, 'sw_start_dialog_msg'.tr,
                   snackPosition: SnackPosition.TOP,
@@ -53,7 +55,7 @@ class StopWatchPage extends GetView<StopWatchController> {
                   // backgroundColor: Colors.grey[900]
                 );
               },
-              child: controller.isPaused
+              child: _stopWatchTimer.isPaused
                   ? Text('sw_resume'.tr)
                   : Text('sw_stop'.tr),
               style: ElevatedButton.styleFrom(
@@ -108,7 +110,7 @@ class StopWatchPage extends GetView<StopWatchController> {
               Spacer(),
               Container(
                 child: Obx(() {
-                  final int value = controller.rawTime;
+                  final int value = _stopWatchTimer.rawTime;
                   final displayTime =
                       _t.getDisplayTime(value, milliSecond: false);
                   final miliSec = _t.getDisplayTimeMilliSecond(value);
@@ -133,7 +135,6 @@ class StopWatchPage extends GetView<StopWatchController> {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(StopWatchController());
     return _stopWatchPage();
   }
 }

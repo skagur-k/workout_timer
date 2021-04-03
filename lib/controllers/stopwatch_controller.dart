@@ -21,8 +21,8 @@ class StopWatchRecord {
 enum StopWatchExecute { start, stop, reset, lap }
 
 /// StopWatchTimer
-class StopWatchTimer {
-  StopWatchTimer({
+class StopWatchController {
+  StopWatchController({
     this.isLapHours = true,
     this.onChange,
     this.onChangeRawSecond,
