@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'components/appBarWidget.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Settings")),
-    );
+        appBar: PreferredSize(
+      preferredSize: Size.fromHeight(70),
+      child: AppBarWidget("Settings"),
+    ));
   }
 }

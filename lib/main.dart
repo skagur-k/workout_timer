@@ -32,7 +32,8 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/settings',
             page: () => SettingsPage(),
-            transition: Transition.rightToLeftWithFade),
+            transition: Transition.downToUp,
+            transitionDuration: Duration(milliseconds: 200)),
       ],
     );
   }
