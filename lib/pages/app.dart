@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:workout_timer_app/pages/timer.dart';
+import 'package:workout_timer_plus/pages/timer.dart';
 import 'components/bottomTabBarWidget.dart';
 import 'stopwatch.dart';
 import 'components/components.dart';

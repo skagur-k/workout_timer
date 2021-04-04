@@ -61,6 +61,14 @@ class TimeHelper {
     return ms.toString().padLeft(2, '0');
   }
 
+  String getDurationToString(Duration d) {
+    String twoDigits(int n) => n.toString().padLeft(2, "0");
+    String minutes = twoDigits(d.inMinutes.remainder(60));
+    String seconds = twoDigits(d.inSeconds.remainder(60));
+    String duration = "$minutes:$seconds";
+    return duration;
+  }
+
   int getRawHours(int value) => (value / (3600 * 1000)).floor();
   int getMinute(int value) => (value / (60 * 1000) % 60).floor();
   int getRawMinute(int value) => (value / 60000).floor();

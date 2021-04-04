@@ -13,7 +13,7 @@ class DrawerWidget extends StatelessWidget {
               Text('dr_title'.tr, style: TextStyle(fontSize: 30)),
             ],
           ),
-          decoration: BoxDecoration(color: Color(0xffF2F2F2))),
+          decoration: BoxDecoration(color: Theme.of(context).backgroundColor)),
       ListTile(
           title: Text('dr_pref'.tr),
           trailing: Icon(Icons.settings),

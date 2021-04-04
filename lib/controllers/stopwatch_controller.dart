@@ -68,6 +68,8 @@ class StopWatchController {
   int? _minute;
   List<StopWatchRecord> _records = [];
 
+  int get currentTime => DateTime.now().millisecondsSinceEpoch;
+
   bool get isRunning => _timer != null ? _timer!.isActive : false;
 
   void setPresetHoursTime(int value) =>

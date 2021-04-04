@@ -11,8 +11,8 @@ const Map<String, String> koKR = {
   'tm_start': '타이머 시작',
 
   //Stopwatch Messages
-  'sw_stopped_msg': '타이머가 중지되었습니다. \n 계속하려면 다시시작을 눌러주세요.',
-  'sw_running_msg': '시간 측정중...',
+  'sw_stopped_msg': '스톱워치가 중지되었습니다.',
+  'sw_running_msg': '스톱워치가 작동중입니다.',
   'sw_resetted_msg': '스톱워치를 시작해주세요',
 
   //Dialog

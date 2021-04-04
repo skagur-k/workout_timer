@@ -8,17 +8,12 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffF2F2F2),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: AppBar(
-          backgroundColor: Color(0xffF2F2F2),
-          title: Text(title,
-              style: TextStyle(
-                  color: Colors.black87, fontWeight: FontWeight.bold)),
+          title: Text(title),
           centerTitle: true,
           elevation: 0,
-          brightness: Brightness.light,
           actions: timer
               ? [
                   IconButton(

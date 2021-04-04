@@ -11,9 +11,9 @@ const Map<String, String> enUS = {
   'tm_start': 'Start Timer',
 
   //Stopwatch Messages
-  'sw_stopped_msg': 'Timer has stopped. \n Press resume to restart your timer.',
-  'sw_running_msg': 'Keeping time...',
-  'sw_resetted_msg': 'Start Your Timer',
+  'sw_stopped_msg': 'Stopwatch has stopped.',
+  'sw_running_msg': 'Running Stopwatch.',
+  'sw_resetted_msg': 'Start the Stopwatch',
 
   //Dialog
   'snackbar_title': 'Workout Timer+',
