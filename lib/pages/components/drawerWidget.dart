@@ -10,7 +10,8 @@ class DrawerWidget extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('dr_title'.tr, style: TextStyle(fontSize: 30)),
+              Text('dr_title'.tr,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ],
           ),
           decoration: BoxDecoration(color: Theme.of(context).backgroundColor)),

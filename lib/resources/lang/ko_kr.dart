@@ -9,6 +9,7 @@ const Map<String, String> koKR = {
   'sw_reset_dialog': '스톱워치를 초기화 하시겠습니까?',
   'cancel': '취소',
   'tm_start': '타이머 시작',
+  'start_time': '시작 시간',
 
   //Stopwatch Messages
   'sw_stopped_msg': '스톱워치가 중지되었습니다.',

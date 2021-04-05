@@ -7,6 +7,7 @@ class Themes {
 
   static final light = ThemeData.light().copyWith(
     accentColor: Colors.white54,
+    switchTheme: SwitchThemeData(),
     backgroundColor: _lightTheme.bg,
     primaryIconTheme: IconThemeData(color: _lightTheme.mainTextColor),
     tabBarTheme: TabBarTheme(
@@ -30,7 +31,7 @@ class Themes {
       headline3: TextStyle(),
       headline4: TextStyle(),
       headline5: TextStyle(),
-      headline6: TextStyle(),
+      headline6: TextStyle(fontWeight: FontWeight.bold),
       subtitle1: TextStyle(),
       subtitle2: TextStyle(),
       caption: TextStyle(),
@@ -69,7 +70,12 @@ class Themes {
       headline3: TextStyle(),
       headline4: TextStyle(),
       headline5: TextStyle(),
-      headline6: TextStyle(),
+      headline6: TextStyle(fontWeight: FontWeight.bold),
+      subtitle1: TextStyle(),
+      subtitle2: TextStyle(),
+      caption: TextStyle(),
+      button: TextStyle(),
+      overline: TextStyle(),
     ).apply(bodyColor: _darkTheme.mainTextColor),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(

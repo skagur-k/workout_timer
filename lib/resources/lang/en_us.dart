@@ -9,6 +9,7 @@ const Map<String, String> enUS = {
   'sw_reset_dialog': 'Reset your Stop Watch?',
   'cancel': 'Cancel',
   'tm_start': 'Start Timer',
+  'start_time': 'Start Time',
 
   //Stopwatch Messages
   'sw_stopped_msg': 'Stopwatch has stopped.',

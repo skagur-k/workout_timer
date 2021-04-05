@@ -6,19 +6,18 @@ import '../helpers/time_helper.dart';
 
 class StopWatchPage extends GetView<StopWatchController> {
   final RxString _msg = "".obs;
-
   final TimeHelper _t = TimeHelper();
   final RxString _startTime = "".obs;
   final RxString _endTime = "".obs;
 
-  String formatDate(DateTime now) => DateFormat('kk:mm').format(now);
+  String formatTime(DateTime now) => DateFormat('h:mm a').format(now);
 
   void startStopWatch() {
     controller.onExecute(StopWatchExecute.start);
-    _startTime.value = formatDate(DateTime.now());
+    _startTime.value = formatTime(DateTime.now());
     Get.snackbar(
       'snackbar_title'.tr,
-      "${'sw_start_dialog_msg'.tr} 시작시간: ${_startTime.value}",
+      "${'sw_start_dialog_msg'.tr} ${'start_time'.tr}: ${_startTime.value}",
       snackPosition: SnackPosition.TOP,
       margin: EdgeInsets.only(top: 70),
       duration: Duration(seconds: 3),
@@ -38,7 +37,7 @@ class StopWatchPage extends GetView<StopWatchController> {
 
   void resetStopWatch() {
     controller.onExecute(StopWatchExecute.reset);
-    _endTime.value = formatDate(DateTime.now());
+    _endTime.value = formatTime(DateTime.now());
     _msg.value = 'sw_resetted_msg'.tr;
     Get.snackbar(
       'snackbar_title'.tr,
