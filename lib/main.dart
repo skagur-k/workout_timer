@@ -9,14 +9,17 @@ import 'resources/theme.dart';
 import 'resources/theme_service.dart';
 
 void main() async {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // status bar color
+  ));
   await GetStorage.init();
   runApp(MyApp());
 }
 
 /* TODO:
-    * 1> Dark Theme ![https://pub.dev/packages/get#change-theme]
+    * 1> Dark Theme ![https://pub.dev/packages/get#change-theme] ****
     * 2> Notifications ![https://github.com/MaikuB/flutter_local_notifications/tree/master/flutter_local_notifications]
-    * 3> Shared Preferences ![]
+    * 3> Shared Preferences ![] ****
     * 4> Splash Screen / Intro Screen
     * 6> Timer Logic
 */
@@ -24,9 +27,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Theme.of(context).backgroundColor, // status bar color
-    ));
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       locale: Get.deviceLocale,

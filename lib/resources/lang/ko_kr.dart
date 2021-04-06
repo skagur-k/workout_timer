@@ -27,5 +27,6 @@ const Map<String, String> koKR = {
   'dr_contact': '의견 보내기',
   'dr_rateapp': '앱 평가하기',
   'dr_policy': '개인정보처리방침',
-  'dr_opensource': '오픈소스 라이선스',
+  'dr_opensource': '오픈소스 라이센스',
+  'dr_info': '앱 정보',
 };

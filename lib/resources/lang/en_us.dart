@@ -28,4 +28,5 @@ const Map<String, String> enUS = {
   'dr_rateapp': 'Rate this App',
   'dr_policy': 'Privacy Policy',
   'dr_opensource': 'Open Source License',
+  'dr_info': 'About This App',
 };

@@ -35,10 +35,15 @@ class DrawerWidget extends StatelessWidget {
           }),
       ListTile(
           title: Text('dr_contact'.tr),
-          trailing: Icon(Icons.info),
+          trailing: Icon(Icons.contact_page),
           onTap: () {
             Get.back();
           }),
+      AboutListTile(
+        child: Text("앱 정보"),
+        icon: Icon(Icons.info),
+        applicationName: 'title'.tr,
+      ),
     ]));
   }
 }
