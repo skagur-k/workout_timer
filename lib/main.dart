@@ -17,7 +17,6 @@ void main() async {
 }
 
 /* TODO:
-    * 1> Dark Theme ![https://pub.dev/packages/get#change-theme] ****
     * 2> Notifications ![https://github.com/MaikuB/flutter_local_notifications/tree/master/flutter_local_notifications]
     * 3> Shared Preferences ![] ****
     * 4> Splash Screen / Intro Screen
